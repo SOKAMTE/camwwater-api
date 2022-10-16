@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\production;
-use Illuminate\Requests\Request;
+use Illuminate\Http\Request;
 
 class ProductionController extends Controller
 {
@@ -21,10 +21,10 @@ class ProductionController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreproductionRequest  $request
+     * @param  \App\Http\Requests\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreproductionRequest $request)
+    public function store(Request $request)
     {
         $request->validate([
             'eau_brute' => 'required|string|max:255',
